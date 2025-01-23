@@ -31,7 +31,7 @@ const Navbar = () => {
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 item-center">
             <a
-              href="#"
+              href="src\components\loginpage.html"
               className="py-2 px-3 border rounded-md hover:text-orange-500 transition"
             >
               Log In
@@ -65,7 +65,7 @@ const Navbar = () => {
             </ul>
             <div className="flex space-x-6">
               <a
-                href="#"
+                href="src\components\loginpage.html"
                 className="py-2 px-3 border rounded-md hover:text-orange-500 transition"
               >
                 log In
