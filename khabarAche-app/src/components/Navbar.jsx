@@ -37,7 +37,7 @@ const Navbar = () => {
               Log In
             </a>
             <a
-              href="#"
+              href="src\components\registerpage.html"
               className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md hover:text-black transition"
             >
               Create an account
@@ -71,7 +71,7 @@ const Navbar = () => {
                 log In
               </a>
               <a
-                href="#"
+                href="src\components\registerpage.html"
                 className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md hover:text-black transition"
               >
                 Create an account
