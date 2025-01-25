@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,minimum-scale=1">
+    <title>Userdashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="stylesheet" href="userdashboard.css" />
+  </head>
+  <body>
+    <input type="checkbox" name="" id="sidebar-toggle">
+    <div class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-flex">
+          <img src="../assets/logo.png" height="100px" width="70px"  />
+          <div class="brand-icons">
+            <span class="las la-bell"></span>
+            <span class="las la-user-circle"></span>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-main">
+        <div class="sidebar-user">
+          <img src="../assets/heroImage.png"/>
+          <div>
+            <h3>User name</h3>
+            <span>User email</span>
+          </div>
+        </div>
+        <div class="sidebar-menu">
+          <div class="menu-head">
+            <span>Dashboard</span>
+          </div>
+          <ul>
+            <li>
+              <a href="">
+                <span class="las la-balance-scale"></span>
+                Finance
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-chart-pie"></span>
+                Analytics
+              </a>
+            </li>
+          </ul>
+          <div class="menu-head">
+            <span>Applications</span>
+          </div>
+          <ul>
+            <li>
+              <a href="">
+                <span class="las la-calendar"></span>
+                Calendar
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-users"></span>
+                Contacts
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-shopping-cart"></span>
+                Favourite_Hotels
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span class="las la-envelope"></span>
+                Mailbox
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <header>
+        <div class="menu-toggle">
+          <label for="sidebar-toggle">
+            <span class="las la-bars"></span>
+          </label>
+        </div>
+        <div class="header-icons">
+          <span class="las la-search"></span>
+          <span class="las la-bookmark"></span>
+          <span class="las la-sms"></span>
+        </div>
+      </header>
+      <main>
+        <div class="page-header">
+          <div>
+            <h1>Analytics Dashboard</h1>
+            <small>Montior your donation</small>
+          </div>
+          <div class="header-actions">
+            <button>
+              <span class="las la-file-export"></span>
+              Report
+            </button>
+            <button>
+              <span class="las la-tools"></span>
+              Settings
+            </button>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-single">
+            <div class="card-flex">
+              <div class="card-info">
+                <div class="card-head">
+                  <span>Donation</span>
+                  <small>Number of Donation</small>
+                </div>
+                <h2>17</h2>
+                <small>Till now you have encountered 17 donations</small>
+              </div>
+              <div class="card-chart sucess">
+                <span class="las la-chart-line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card-single">
+            <div class="card-flex">
+              <div class="card-info">
+                <div class="card-head">
+                  <span>Purchases</span>
+                  <small>Number of purchases to donate</small>
+                </div>
+                <h2>5</h2>
+                <small>Till now you have purchased from 5 hotels to donate</small>
+              </div>
+              <div class="card-chart danger">
+                <span class="las la-chart-line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="card-single">
+            <div class="card-flex">
+              <div class="card-info">
+                <div class="card-head">
+                  <span>Free-Purchases</span>
+                  <small>Number of purchases</small>
+                </div>
+                <h2>12</h2>
+                <small>Till now you have purchased free from 12 hotels to donate</small>
+              </div>
+              <div class="card-chart yellow">
+                <span class="las la-chart-line"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jobs-grid">
+          <div class="analytics-card">
+            <div class="analytics-head">
+              <h3>Actions needed</h3>
+              <span class="las la-ellipsis-h"></span>
+            </div>
+            <div class="analytics-chart">
+              <div class="chart-circle">
+                <h1>74%</h1>
+              </div>
+              <div class="analytics-note">
+                <small>You have the ability to download PDF files that contain details or records of the donations you have made. These PDFs likely serve as receipts or summaries for your reference.</small>
+              </div>
+            </div>
+            <div class="analytics-btn">
+                <button>Download pdf</button>
+            </div>
+          </div>
+          <div class="jobs">
+            <h2>Donate <small>See all donation opportunities<span class="las la-arrow-right"></span></small></h2>
+            <div class="table-reponsive">
+              <table width="100%" >
+                <tbody>
+                  <tr>
+                    <td>
+                      <div>
+                        <span class="indicator"></span>
+                      </div>
+                    </td>
+                    <td>
+                      <div text-align="center">
+                        kacchi vai
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        menu
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        Description
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <button>Applied</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div>
+                        <span class="indicator even"></span>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        The restuarant
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        menu
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        Description
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <button>Apply</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div>
+                        <span class="indicator"></span>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        Bangla_Ghor
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        menu
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        description
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <button>Applied</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div>
+                        <span class="indicator even"></span>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                       Hazir_Biriyani
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        menu
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        description
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <button>Apply</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <label for="sidebar-toggle" class="body-label"></label>
+  </body>
+</html>
