@@ -8,11 +8,11 @@ const Navbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
   return (
-    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
-      <div className="container px-4 mx-auto relative lg:text-sm">
+    <nav className="sticky top-0 z-30 h-35 backdrop-blur-lg border-b border-neutral-600/60">
+      <div className="container px-10 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
+            <img className="h-50 w-40 mr-1" src={logo} alt="Logo" />
             <span className="text-xl tracking-tight bg-gradient-to-r from-orange-500 to-orange-800 text-transparent bg-clip-text">
               KHABAR_ACHE?
             </span>
