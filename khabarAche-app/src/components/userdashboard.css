@@ -350,3 +350,13 @@ table button{
         margin-left: 0rem;
     }
 }
+footer{
+    width: 100%;
+    color: white;
+    box-sizing: border-box;
+    bottom: 0;
+    text-align: center;
+    font-size: 22px;
+    padding: 15px 0;
+    background-color: black;
+  }
