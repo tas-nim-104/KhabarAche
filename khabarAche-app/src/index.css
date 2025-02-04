@@ -5,3 +5,19 @@
     color-scheme: dark;
     background: linear-gradient(to bottom, black, rgb(3, 2, 2));
 }
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.scrollbar-hide {
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
