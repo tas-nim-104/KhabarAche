@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef ,useEffect} from "react";
 import { motion } from "framer-motion";
 import { FaChevronLeft, FaChevronRight, FaShoppingCart } from "react-icons/fa";
 import img2 from "../assets/foodimg/img_2.jpg";
