@@ -29,7 +29,7 @@ const Menu = () => {
       <div className="relative">
         <button
           onClick={() => scroll("left")}
-          className="hover:black-500 transition absolute left-0 top-1/2 -translate-y-1/2 bg-white/30 backdrop-blur-lg p-3 rounded-full shadow-lg z-10"
+          className="hover:bg-black transition absolute left-0 top-1/2 -translate-y-1/2 bg-white/30 backdrop-blur-lg p-3 rounded-full shadow-lg z-10"
         >
           <FaChevronLeft size={24} />
         </button>
@@ -55,7 +55,7 @@ const Menu = () => {
 
         <button
           onClick={() => scroll("right")}
-          className="hover:bg-gray-500 absolute right-0 top-1/2 -translate-y-1/2 bg-white/30 backdrop-blur-lg p-3 rounded-full shadow-lg z-10"
+          className="hover:bg-black transition absolute right-0 top-1/2 -translate-y-1/2 bg-white/30 backdrop-blur-lg p-3 rounded-full shadow-lg z-10"
         >
           <FaChevronRight size={24} />
         </button>
