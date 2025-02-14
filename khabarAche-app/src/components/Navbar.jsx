@@ -9,7 +9,6 @@ const Navbar = () => {
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
-  //const navigate=useNavigate();
   return (
     <nav className="sticky  z-30 h-25 backdrop-blur-lg border-b border-neutral-600/60">
       <div className="container px-10 mx-auto relative lg:text-sm ">
@@ -33,18 +32,18 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 item-center">
-            <a
-              href="src\components\loginpage.html"
+            <Link
+              to="/loginpage"
               className="py-2 px-3 border rounded-md hover:text-orange-500 transition"
             >
               Log In
-            </a>
-            <a
-              href="src\components\registerpage.html"
+            </Link>
+            <Link
+              to="/registerpage"
               className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md hover:text-black transition"
             >
               Create an account
-            </a>
+            </Link>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
@@ -69,17 +68,17 @@ const Navbar = () => {
             </ul>
             <div className="flex space-x-6">
               <Link
-                to="src\components\loginpage.html"
+                to="/loginpage"
                 className="py-2 px-3 border rounded-md hover:text-orange-500 transition"
               >
                 log In
               </Link>
-              <a
-                href="src\components\registerpage.html"
+              <Link
+                to="/registerpage"
                 className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md hover:text-black transition"
               >
                 Create an account
-              </a>
+              </Link>
             </div>
           </div>
         )}
