@@ -2,27 +2,22 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../components/loginpage.css";
 import "boxicons/css/boxicons.min.css"; 
-
-const RegisterPage = () => {
-  const [formData, setFormData] = useState({
-    username: "",
-    phone: "",
-    email: "",
-    password: "",
-    remember: false,
-  });
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
-  };
-
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+const registerpage = () => {
+  const [username, setName] = useState()
+  const [phone, setPhone] = useState()
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+  const [remember, setRemembar] = useState()
+  const Navigate=useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
+    axios.post('http://localhost:4002/registerpage',{username, phone,email, password,remember})
+    .then(result=> {console.log(result)
+    Navigate('/loginpage')
+    })
+    .catch(err=>console.log(err))
   };
 
   return (
@@ -36,9 +31,7 @@ const RegisterPage = () => {
               type="text"
               name="username"
               placeholder="Username"
-              value={formData.username}
-              onChange={handleChange}
-              required
+              onChange={(e) => setName(e.target.value)}
             />
             <i className="bx bx-user"></i>
           </div>
@@ -49,9 +42,7 @@ const RegisterPage = () => {
               name="phone"
               placeholder="Phone (11 digits)"
               pattern="[0-9]{11}"
-              value={formData.phone}
-              onChange={handleChange}
-              required
+              onChange={(e) => setPhone(e.target.value)}
             />
             <i className="bx bx-phone"></i>
           </div>
@@ -61,9 +52,7 @@ const RegisterPage = () => {
               type="email"
               name="email"
               placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
+              onChange={(e) => setEmail(e.target.value)}
             />
             <i className="bx bx-envelope"></i>
           </div>
@@ -73,9 +62,7 @@ const RegisterPage = () => {
               type="password"
               name="password"
               placeholder="Password"
-              value={formData.password}
-              onChange={handleChange}
-              required
+              onChange={(e) => setPassword(e.target.value)}
             />
             <i className="bx bx-lock"></i>
           </div>
@@ -85,8 +72,7 @@ const RegisterPage = () => {
               <input
                 type="checkbox"
                 name="remember"
-                checked={formData.remember}
-                onChange={handleChange}
+                onChange={(e) => setRemembar(e.target.value)}
               />
               Remember Me
             </label>
@@ -111,4 +97,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default registerpage;
