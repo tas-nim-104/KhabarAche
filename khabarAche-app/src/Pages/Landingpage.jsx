@@ -14,7 +14,7 @@ const App = () => {
       <FeatureSection />
       <Workflow />
       <Testimonials />
-        <Footer />
+      <Footer />
       </div>
     </>
   );
