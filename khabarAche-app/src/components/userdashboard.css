@@ -17,8 +17,8 @@
 #sidebar-toggle:checked ~ .sidebar{
     left:-100%;
 }
-#sidebar-toggle:checked ~ .body-label{
-    right:0;
+#sidebar-toggle:checked ~ .userdashboard-label{
+    right:0px;
 }
 #sidebar-toggle:checked ~ .main-content header{
     left:0;
@@ -309,7 +309,7 @@ span.indicator.even{
 {
     .sidebar{
         left:-100%;
-        z-index:30;
+        z-index: 30;
     }
     .main-content{
         margin-left: 0;
@@ -319,7 +319,8 @@ span.indicator.even{
         width:100%;
     }
     #sidebar-toggle:checked ~ .sidebar{
-        left:0;
+        left: 0px;
+        
     }
     .cards{
         grid-template-columns: repeat(2, 1fr);
