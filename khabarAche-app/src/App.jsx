@@ -1,22 +1,27 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import FeatureSection from "./components/FeatureSection";
-import Workflow from "./components/Workflow";
-import Footer from "./components/Footer";
-import Testimonials from "./components/Testimonials";
+import Landingpage from "./Pages/Landingpage";
+import Homepage from "./Pages/Homepage";
+import Loginpage from "../src/components/loginpage";
+import Registerpage from "../src/components/registerpage";
+import Userdashboard from "../src/components/userdashboard";
+import Userdashboardhotel from "../src/components/userdashboardhotel";
+import "../src/components/loginpage.css";
+import "../src/components/userdashboard.css";
 const App = () => {
   return (
-    <>
-      <Navbar/>
-      <div className="max-w-7xl mx-auto pt-20 px-6">
-      <HeroSection />
-      <FeatureSection />
-      <Workflow />
-      <Testimonials />
-        <Footer />
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<Landingpage />} /> 
+          <Route path="/loginpage" element={<Loginpage />} />
+          <Route path="/registerpage" element={<Registerpage />} />
+          <Route path="/userdashboard" element={<Userdashboard />} />
+          <Route path="/userdashboardhotel" element={<Userdashboardhotel />} />
+          <Route path="/Homepage" element={<Homepage />} />
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 };
 

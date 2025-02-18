@@ -1,139 +1,115 @@
 
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "poppins",sans-serif;
-}
-body{
+.loginpage {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("../assets/logpagepic.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url("../assets/logpagepic.jpg") no-repeat center center/cover;
+    flex-direction: column;
 }
-.wrapper{
-    width: 420px;
-    background-color: transparent;
+
+.wrapper {
+    width: 390px;
+    background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    color: rgb(255, 255, 255);
+    color: white;
     border-radius: 12px;
     padding: 30px 40px;
+    text-align: center;
 }
-.wrapper h1{
+
+.wrapper h1 {
     font-size: 32px;
     text-align: center;
 }
-.wrapper .input-box
-{
+
+
+.input-box {
     position: relative;
     width: 100%;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input-box input {
+    width: 100%;
     height: 50px;
-    margin: 30px 0;
-}
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: none;
-    outline: none;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 40px;
-    border: 2px solid rgba(255, 255 ,255 , .2);
     font-size: 16px;
     color: white;
-    padding: 20px 45px 20px 20px;
+    padding: 15px 45px 15px 20px;
 }
 
-.input-box input::placeholder{color: white;}
 
-.input-box i{
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.input-box i {
     position: absolute;
-    right: 20px;
-    top: 30%;
-    transform: translate(-50%);
-    font-size: 20px;
+    right: 15px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
 }
-.wrapper .remember-forgot{
+
+.remember-forgot {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    font-size: 15px;
-    margin: -15px 0 15px;
+    font-size: 14px;
+    margin-top: -10px;
 }
-.remember-forgot label input
-{
-    accent-color: #fff;
-    margin-right: 3px;
-}
-.remember-forgot a{
-    color: #fff;
-    text-decoration: none;
-  
-  }
-.remember-forgot a:hover{
-    text-decoration: underline;
-}
-.wrapper .logbutton
-{
-    width: 100%;
-    height: 45px;
-    background-color: white;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0 ,0 , .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
-}
-.wrapper .logwithhotelbutton
-{
-    width: 100%;
-    height: 45px;
-    background-color: white;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0 ,0 , .1);
-    cursor: pointer;
-    font-size: 16px;
-    margin: 30px 0;
-    color: #333;
-    font-weight: 600;
-}
-.wrapper .register-link
-{
-    font-size: 15px;
-    text-align: center;
-    margin: 20px 0 15px;
-}
-.register-link p a{
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-.register-link p a:hover{
-    text-decoration: underline;
-  }
-  header,footer{
-    background-color: rgba(0, 0 ,0 , .1);
-    width: 100%;
-    color: white;
-    box-sizing: border-box;
-  }
-  footer{
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    font-size: 22px;
-    padding: 20px 0;
-    background-color: black;
-  }
-  header{
-    font-size: 20px;
+
+.remember-forgot label {
     display: flex;
-    justify-content: space-around;
-  }
+    align-items: center;
+}
+
+.remember-forgot input {
+    margin-right: 5px;
+}
+
+.logbutton,.logwithhotelbutton {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 20px;
+}
+
+.register-link {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
