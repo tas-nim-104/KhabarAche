@@ -23,7 +23,9 @@ router.post("/", async (req, res) => {
         }
 
         const token = user.generateAuthToken();
-        res.status(200).send({ data: token, message: "Logged in successfully" });
+        res.status(200).send({ data: token,
+            user: { username: user.username, email: user.email }, 
+             message: "Logged in successfully" });
 
     } catch (error) {
         console.error("Login error:", error);
@@ -32,6 +34,7 @@ router.post("/", async (req, res) => {
 });
 const validate = (data) => {
     const schema = Joi.object({
+        //username:Joi.string().email().required().label("Username"),
         email: Joi.string().email().required().label("Email"),
         password: Joi.string().required().label("Password"),
     });
