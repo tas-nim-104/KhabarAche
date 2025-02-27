@@ -9,7 +9,6 @@ import Userdashboardhotel from "../src/components/userdashboardhotel";
 import "../src/components/loginpage.css";
 import "../src/components/userdashboard.css";
 const App = () => {
-  //const user = localStorage.getItem("token");
   return (
     <Router>
       <div>
