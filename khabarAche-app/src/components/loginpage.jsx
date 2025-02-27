@@ -12,7 +12,7 @@ const LoginPage = () => {
   const [isHotelLogin, setIsHotelLogin] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e, hotelLogin = false) => {
     if (e) e.preventDefault();
     setError("");
 
@@ -20,12 +20,12 @@ const LoginPage = () => {
       const response = await axios.post("http://localhost:4002/api/auth", {
         email,
         password,
-       // remember,
       });
 
       if (response.status === 200) {
-        localStorage.setItem("token", response.data);
-        navigate(isHotelLogin ? "/userdashboardhotel" : "/userdashboard");
+        const { username, email } = response.data.user;
+        localStorage.setItem("user", JSON.stringify({ username, email }));
+        navigate(hotelLogin ? "/userdashboardhotel" : "/userdashboard");
       }
     } catch (err) {
       console.error("Login error:", err);
@@ -36,7 +36,7 @@ const LoginPage = () => {
   return (
     <div className="loginpage">
       <div className="wrapper">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e) => handleSubmit(e, isHotelLogin)}>
           <h1>Log In</h1>
           {error && <p className="error-message">{error}</p>}
           <div className="input-box">
@@ -74,7 +74,14 @@ const LoginPage = () => {
             <Link to="/forgot-password">Forgot password?</Link>
           </div>
           <button type="submit" className="logbutton">Login</button>
-          <button type="submit" className="logwithhotelbutton" onClick={() => setIsHotelLogin(true)}>
+          <button
+            type="button"  
+            className="logwithhotelbutton"
+            onClick={(e) => {
+              setIsHotelLogin(true);
+              handleSubmit(e, true);  
+            }}
+          >
             Login For Hotels
           </button>
         </form>
