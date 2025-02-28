@@ -4,12 +4,7 @@ import user2 from "../assets/profile-pictures/user2.jpg";
 import user3 from "../assets/profile-pictures/user3.jpg";
 import user4 from "../assets/profile-pictures/user4.jpg";
 
-export const navItems = [
-  { label: "Home", href: "/Homepage" },
-  { label: "Hotels", href: "#" },
-  { label: "Testimonials", href: "#" },
-  { label: "Account", href: "#" },
-];
+
 
 export const testimonials = [
   {
