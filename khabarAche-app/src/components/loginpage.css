@@ -113,3 +113,31 @@
     position: fixed;
     bottom: 0;
 }
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+  }
+  
+  .back-button:hover {
+    background-color: gray;
+    transform: scale(1.1);
+  }
+  
+  .back-button i {
+    color: white;
+    font-size: 20px;
+  }
+  
+  
