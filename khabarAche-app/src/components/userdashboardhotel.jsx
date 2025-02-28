@@ -9,12 +9,14 @@ const UserDashboardHotel = () => {
   const [user, setUser] = useState({ username: "", email: "" });
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isHotelLogin, setIsHotelLogin] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
       setUser(storedUser);
+      setIsHotelLogin(true);
     }
   }, []);
   const handleLogout = () => {

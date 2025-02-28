@@ -8,7 +8,7 @@ import authRoutes from "./routes/auth.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 4002;
+const PORT = process.env.PORT || 4004;
 const URI = process.env.MONGO_URI;
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Database connected"))
