@@ -9,6 +9,7 @@ const UserDashboard = () => {
   const [user, setUser] = useState({ username: "", email: "" });
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(true);
+
   const navigate = useNavigate();
 
   useEffect(() => {
