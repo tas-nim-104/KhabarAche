@@ -23,15 +23,23 @@ router.post("/", async (req, res) => {
         }
 
         const token = user.generateAuthToken();
-        res.status(200).send({ data: token,
-            user: { username: user.username, email: user.email }, 
-             message: "Logged in successfully" });
+        
+        res.status(200).send({ 
+            data: token,
+            user: { 
+                username: user.username, 
+                email: user.email, 
+                isHotelLogin: user.isHotelLogin 
+            }, 
+            message: "Logged in successfully" 
+        });
 
     } catch (error) {
         console.error("Login error:", error);
         res.status(500).send({ message: "Internal Server Error" });
     }
 });
+
 const validate = (data) => {
     const schema = Joi.object({
         //username:Joi.string().email().required().label("Username"),

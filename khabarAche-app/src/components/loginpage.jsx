@@ -17,14 +17,18 @@ const LoginPage = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:4002/api/auth", {
+      const response = await axios.post("http://localhost:4004/api/auth", {
         email,
         password,
       });
 
       if (response.status === 200) {
         const { username, email } = response.data.user;
-        localStorage.setItem("user", JSON.stringify({ username, email }));
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ username, email, isHotelLogin: hotelLogin })
+        );
+
         navigate(hotelLogin ? "/userdashboardhotel" : "/userdashboard");
       }
     } catch (err) {
@@ -35,6 +39,9 @@ const LoginPage = () => {
 
   return (
     <div className="loginpage">
+      <button className="back-button" onClick={() => navigate(-1)}>
+        <i className="bx bx-arrow-back"></i>
+      </button>
       <div className="wrapper">
         <form onSubmit={(e) => handleSubmit(e, isHotelLogin)}>
           <h1>Log In</h1>
@@ -73,13 +80,15 @@ const LoginPage = () => {
             </label>
             <Link to="/forgot-password">Forgot password?</Link>
           </div>
-          <button type="submit" className="logbutton">Login</button>
+          <button type="submit" className="logbutton">
+            Login
+          </button>
           <button
-            type="button"  
+            type="button"
             className="logwithhotelbutton"
             onClick={(e) => {
               setIsHotelLogin(true);
-              handleSubmit(e, true);  
+              handleSubmit(e, true);
             }}
           >
             Login For Hotels
