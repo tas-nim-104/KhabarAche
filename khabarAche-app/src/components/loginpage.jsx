@@ -22,15 +22,21 @@ const LoginPage = () => {
             password,
         });
 
-        if (response.status === 200) {
-            const { username, email, token } = response.data.user;
+        console.log("Login Response:", response.data); 
 
-            localStorage.setItem(
-                "user",
-                JSON.stringify({ username, email, isHotelLogin: hotelLogin })
-            );
-            localStorage.setItem("token", token); 
-            
+        if (response.status === 200) {
+            const { user, data: token } = response.data; 
+            if (!token) {
+                console.error("No token received!");
+                setError("Authentication failed. No token provided.");
+                return;
+            }
+
+            localStorage.setItem("token", token);  
+            localStorage.setItem("user", JSON.stringify(user));
+
+            console.log("Stored Token:", localStorage.getItem("token")); 
+
             navigate(hotelLogin ? "/userdashboardhotel" : "/userdashboard");
         }
     } catch (err) {
