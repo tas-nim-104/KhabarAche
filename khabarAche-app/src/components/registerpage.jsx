@@ -15,7 +15,7 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4004/api/users", {
+      const response = await axios.post("http://localhost:4002/api/users", {
         username,
         phone,
         email,
