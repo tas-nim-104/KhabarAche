@@ -17,26 +17,20 @@ const LoginPage = () => {
     setError("");
 
     try {
-        const response = await axios.post("http://localhost:4002/api/auth", {
+        const response = await axios.post("http://localhost:4003/api/auth", {
             email,
             password,
         });
 
-        console.log("Login Response:", response.data); 
-
         if (response.status === 200) {
-            const { user, data: token } = response.data; 
-            if (!token) {
-                console.error("No token received!");
-                setError("Authentication failed. No token provided.");
-                return;
-            }
+            const { username, email, token } = response.data.user;
 
-            localStorage.setItem("token", token);  
-            localStorage.setItem("user", JSON.stringify(user));
-
-            console.log("Stored Token:", localStorage.getItem("token")); 
-
+            localStorage.setItem(
+                "user",
+                JSON.stringify({ username, email, isHotelLogin: hotelLogin })
+            );
+            localStorage.setItem("token", token); 
+            
             navigate(hotelLogin ? "/userdashboardhotel" : "/userdashboard");
         }
     } catch (err) {

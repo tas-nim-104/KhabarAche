@@ -8,7 +8,7 @@ import postRoutes from "./routes/posts.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 4002;
+const PORT = process.env.PORT || 4003;
 const URI = process.env.MONGO_URI;
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Database connected"))
