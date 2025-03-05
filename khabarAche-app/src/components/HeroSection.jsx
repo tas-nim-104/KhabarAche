@@ -3,7 +3,7 @@ import heroImage from "../assets/heroImage.png";
 const HeroSection = () => {
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20">
-      <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
+      <h1 className="text-4xl sm:text-3xl lg:text-5xl text-center tracking-wide">
         A website listing every restaurant in Bangladesh and
         <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
           {" "}
@@ -18,7 +18,7 @@ const HeroSection = () => {
       </p>
       <div className="flex justify-center my-10">
         <a
-          href="#"
+          href="src\components\registerpage.html"
           className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md hover:text-black transition"
         >
           Sign up

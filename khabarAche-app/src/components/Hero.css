@@ -1,0 +1,68 @@
+.hero {
+    height: 40vw;
+    margin: 10px auto;
+    width: auto;
+    background: url('../assets/foodimg/image.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: backdrop-filter 0.3s ease-in-out;
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border-radius: 20px;
+    transition: backdrop-filter 0.3s ease-in-out;
+}
+.hero.blur-active::before {
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+}
+
+
+.hero-contents{
+    position: absolute;
+    display:flex;
+    flex-direction:column;
+    align-items: start;
+    gap:1.5vw;
+    max-width: 100%;
+    bottom:10%;
+    left:6vw;
+    animation: fadeIn 2s;
+}
+.hero-contents h2{
+    
+    font-weight: 500;
+    color:black;
+    font-size: max(4.5vw,22px);
+    text-shadow: 
+        -1px -1px 0 orangered,  
+        1px -1px 0 white,  
+        -1px 1px 0 black,  
+        2px 2px 0 black;
+}
+.hero-contents p{
+    color:black;
+    font-size: 1vw;
+    font-weight: 500;
+}
+.hero-contents button{
+    border: none;
+    color: orangered;
+    font-weight: 500;
+    padding:1vw 2.3vw;
+    background-color: black;
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+}
